@@ -44,30 +44,6 @@ The best part about this architecture is we don't even have to modify our client
 -   `temperature`: (0 - 99) How aggressive the model is going to be when identifying trades based on percent difference in simulated "receive" values from both swaps.  
     For example, if `temperature` is set to 80, the bot will only identify a valid trade if the simulated "receive" value (`r`) for one swap differs from the other swap by at least 20%.
 
-### About this Repository
-
-This repository is broken up as follows:
-
--   `app`: The User Interface for running the arbitrage bot against two provided swap programs
--   `program`: The arbitrage program itself
--   `tests`: A series of tests to run on the arbitrage program
-
-If you're following this workshop **on your own**:
-
-1. Clone down the [repository for the swap program](https://github.com/solana-developers/pirate-bootcamp/tree/main/quest-4) and follow the steps in the `README.md` to build & deploy a swap program, add liquidity, and place some random swaps.
-2. Take the program's address and paste it into this repository as Swap #1.
-3. Repeat Step 1 with a new program address (you should now have two deployed active swap programs).
-4. Take the program's address and paste it into this repository as Swap #2.
-5. Build & deploy the arbitrage program.
-6. Run `yarn run test` to test the arbitrage program.  
-   You can adjust the bot's configurations - such as `concurrency` and `temperature` in the test file itself.
-
-If you're following this workshop **in an existing bootcamp**:
-
-> Ideally you will be working with this quest after completing Quest #4 and deploying at least two swap programs amongst your bootcamp peers
-
-1. Deploy your arbitrage program
-2. Find two swap programs you'd like to try to arbitrage trade between. Paste their program IDs into the UI or the test script
 
 ### The Arbitrage Program
 
